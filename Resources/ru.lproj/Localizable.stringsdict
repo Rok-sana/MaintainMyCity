@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>%u days ago</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@days@</string>
+            <key>days</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>u</string>
+                <key>one</key>
+                <string>%u день</string>
+                <key>few</key>
+                <string>%u дня</string>
+                <key>other</key>
+                <string>%u дней</string>
+            </dict>
+        </dict>
+        
+        <key>%u months ago</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@months@</string>
+            <key>months</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>u</string>
+                <key>one</key>
+                <string>%u месяц</string>
+                <key>few</key>
+                <string>%u месяца</string>
+                <key>other</key>
+                <string>%u месяцев</string>
+            </dict>
+        </dict>
+        
+        <key>%u years ago</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@years@</string>
+            <key>years</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>u</string>
+                <key>one</key>
+                <string>%u год</string>
+                <key>few</key>
+                <string>%u года</string>
+                <key>other</key>
+                <string>%u лет</string>
+            </dict>
+        </dict>
+        
+        <key>%u hours ago</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@hours@</string>
+            <key>hours</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>u</string>
+                <key>one</key>
+                <string>%u час</string>
+                <key>few</key>
+                <string>%u часа</string>
+                <key>other</key>
+                <string>%u часов</string>
+            </dict>
+        </dict>
+        
+        <key>%u minutes ago</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@minutes@</string>
+            <key>minutes</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>u</string>
+                <key>one</key>
+                <string>%u минуту</string>
+                <key>few</key>
+                <string>%u минуты</string>
+                <key>other</key>
+                <string>%u минут</string>
+            </dict>
+        </dict>
+        
+    </dict>
+</plist>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AssetsMO" representedClassName="AssetsMO" syncable="YES" codeGenerationType="class">
+        <attribute name="asset" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PostInfoMO" inverseName="assets" inverseEntity="PostInfoMO" syncable="YES"/>
+    </entity>
+    <entity name="CategoryMO" representedClassName="CategoryMO" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PostInfoMO" inverseName="category" inverseEntity="PostInfoMO" syncable="YES"/>
+    </entity>
+    <entity name="PostInfoMO" representedClassName="PostInfoMO" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="liked" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="likes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assets" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AssetsMO" inverseName="post" inverseEntity="AssetsMO" syncable="YES"/>
+        <relationship name="author" maxCount="1" deletionRule="Deny" destinationEntity="UserInfoMO" inverseName="posts" inverseEntity="UserInfoMO" syncable="YES"/>
+        <relationship name="category" maxCount="1" deletionRule="Deny" destinationEntity="CategoryMO" inverseName="posts" inverseEntity="CategoryMO" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="UserInfoMO" representedClassName="UserInfoMO" syncable="YES">
+        <attribute name="avatarUrl" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PostInfoMO" inverseName="author" inverseEntity="PostInfoMO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CategoryMO" positionX="-88.21484375" positionY="144.93359375" width="128" height="90"/>
+        <element name="PostInfoMO" positionX="-43.76171875" positionY="-203.21875" width="128" height="225"/>
+        <element name="UserInfoMO" positionX="-247.75390625" positionY="-82.22265625" width="128" height="105"/>
+        <element name="AssetsMO" positionX="-144" positionY="-54" width="128" height="90"/>
+    </elements>
+</model>

@@ -1,0 +1,93 @@
+//
+//  TypeOfIncidentViewModel.swift
+//  MaintainMyCity
+//
+//  Created by swstation on 09.10.2018.
+//  Copyright © 2018 swstation. All rights reserved.
+//
+
+import Foundation
+
+protocol TypeOfIncidentViewModelType: class {
+<<<<<<< HEAD
+    func loadCategoryTitle()
+    func countCategories() -> Int
+    func setCategoryCellForIndexPath( _ index: IndexPath) -> String
+    func selectedCell(index: IndexPath)
+=======
+    func fetchesCategoriesList()
+    var  categoriesCount: Int { get }
+    func categoryCellTitleForItem( _ index: IndexPath) -> String
+    func updateSelectedCell(index: IndexPath)
+>>>>>>> develop
+    var reloadTableViewData: (() -> Void)? {get set}
+    var handlerError: ((Error) -> ())? {get set}
+}
+
+class TypeOfIncidentViewModel: TypeOfIncidentViewModelType {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> develop
+    weak var router: TypeOfIncidentRouterType?
+    private let postManager: PostManagerType
+    private var categories: [Category] = []
+    var reloadTableViewData: (() -> Void)?
+    var handlerError: ((Error) -> ())?
+    private var categoryCompletion: ((Category) -> ())?
+<<<<<<< HEAD
+    init(postManager: PostManagerType, categoryCompletion: @escaping ((Category) -> ())) {
+        self.categoryCompletion = categoryCompletion
+        self.postManager = postManager
+        loadCategoryTitle()
+    }
+    func setCategoryCellForIndexPath( _ index: IndexPath) -> String {
+=======
+    var categoriesCount: Int = 0
+    init(postManager: PostManagerType, categoryCompletion: @escaping ((Category) -> ())) {
+        self.categoryCompletion = categoryCompletion
+        self.postManager = postManager
+        fetchesCategoriesList()
+       
+    }
+    func categoryCellTitleForItem( _ index: IndexPath) -> String {
+>>>>>>> develop
+        let title = categories[index.row].title
+        return title
+    }
+    
+<<<<<<< HEAD
+    func countCategories() -> Int {
+          return categories.count
+    }
+    func selectedCell(index: IndexPath) {
+        categoryCompletion?(categories[index.row])
+    }
+    
+    func loadCategoryTitle() {
+=======
+    func updateSelectedCell(index: IndexPath) {
+        categoryCompletion?(categories[index.row])
+    }
+    
+    func fetchesCategoriesList() {
+>>>>>>> develop
+        postManager.loadCategory { (result) in
+            switch result {
+            case .success(let categories):
+              self.categories = categories.sorted { $0.title < $1.title }
+<<<<<<< HEAD
+=======
+              self.categoriesCount = categories.count
+>>>>>>> develop
+                DispatchQueue.main.async {
+                    self.reloadTableViewData?()
+                }
+            case .failure(let error):
+                self.handlerError?(error)
+                
+            }
+        }
+        
+    }
+}

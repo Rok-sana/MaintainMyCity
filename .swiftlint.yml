@@ -1,0 +1,11 @@
+trailing_whitespace:
+  ignores_empty_lines: true
+  ignores_comments: true
+
+identifier_name:
+  min_length: 2
+
+line_length: 200
+
+excluded:
+  - Pods

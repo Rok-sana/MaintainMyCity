@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LaunchVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LaunchVC" customModule="MaintainMyCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fVC-1d-Cxg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="46.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="Ysr-6D-bMo" kind="custom" identifier="showMain" customClass="RootControllerSegue" customModule="MaintainMyCity" customModuleProvider="target" id="o67-dn-gyt"/>
+                        <segue destination="T6Y-hh-JoC" kind="custom" identifier="showLogIn" customClass="RootControllerSegue" customModule="MaintainMyCity" customModuleProvider="target" id="06b-GU-3fd"/>
+                        <segue destination="60h-qV-uJy" kind="custom" identifier="showSkippedLoginNews" customClass="RootControllerSegue" customModule="MaintainMyCity" customModuleProvider="target" id="r7b-Hx-Weh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581.60000000000002" y="-980.05997001499259"/>
+        </scene>
+        <!--LogInVC-->
+        <scene sceneID="imY-PN-kwI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogInVC" id="T6Y-hh-JoC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3K-m2-WXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1352" y="-981"/>
+        </scene>
+        <!--singleNewsScreen-->
+        <scene sceneID="V6B-9x-IaJ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="singleNewsScreen" storyboardName="NewsVC" referencedIdentifier="singleNewsScreen" id="60h-qV-uJy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ZT-P4-Rj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="-525"/>
+        </scene>
+        <!--TabController-->
+        <scene sceneID="bwO-lJ-nqC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabController" id="Ysr-6D-bMo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cL-6a-w7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582" y="-398"/>
+        </scene>
+    </scenes>
+</document>
